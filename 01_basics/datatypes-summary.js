@@ -36,3 +36,24 @@ console.log(typeof myFunction);
 
 // Array, Objects, Functions
 
+
+// Stack memory: (premitive), copy
+// Heap memory: (Non-premitive), Reference
+
+let myYoutubename = "hiteshchoudharydotcom"
+let anothername = "chaiaurcode"
+
+console.log(myYoutubename);
+console.log(anothername);
+
+let userOne = {
+    email : "user@google.com",
+    upi : "user@byl"
+
+}
+
+let userTwo = userOne
+
+userTwo.email = "hitesh@goole.com"
+console.log(userOne.email);
+console.log(userTwo.email);
