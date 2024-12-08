@@ -14,6 +14,23 @@ const anotherId = Symbol('123')
 
 console.log(id === anotherId);
 
+const bigNumber = 345689124455n
+
+const heros = ["shaktiman", "naagraj","doga"]
+
+let myObj ={
+        name:"hitesh",
+        age:22,
+}
+
+const myFunction = function()
+{
+    console.log("Hello world");
+}
+
+console.log(typeof heros);
+console.log(typeof myFunction);
+
 
 // Reference (Non primitive)
 
