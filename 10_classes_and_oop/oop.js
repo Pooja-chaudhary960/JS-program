@@ -21,9 +21,12 @@ function User(username, loginCount, isLoggedIn){
     this.loginCount = loginCount;
     this.isLoggedIn = isLoggedIn
 
+    this.greeting = function(){
+        console.log(`Welcome ${this.username}`);
+    }
     return this
 }
 const userOne = new User("pooja" , 10, true)
 const userTwo = new User("CahiAUrCode", 11, false)
-console.log(userOne);
+console.log(userOne.constructor);
 console.log(userTwo);
