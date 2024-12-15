@@ -1,31 +1,65 @@
-function multipleBy5(num){
-    
-    return num*5
+// let myName = "pooja     "
+// let mychannel = "chai   "
 
-}
-multipleBy5.power = 2
+// console.log(myName.truelength);
 
-console.log(multipleBy5(5));
-console.log(multipleBy5.power);
+let myHeros = ["thor", "spiderman"]
 
-console.log(multipleBy5.prototype);
+let heroPower = {
+    thor:"hammer",
+    spiderman:"sling",
 
-function createUser(username, score){
-    this.username = username
-    this.score = score
-}
-
-createUser.prototype.increment = function(){
-    this.score++
-}
-createUser.prototype.printMe = function(){
-    console.log(`score is ${this.score}`);
+    getSpiderPower: function(){
+        console.log(`Spidy power is ${this.spiderman}`);
+    }
 }
 
-const chai = new createUser("chai", 25)
-const tea = createUser("tea", 250)
+Object.prototype.hitesh = function(){
+    console.log(`hitesh is present in all objects`);
+}
 
-chai.printMe()
+Array.prototype.heyHitesh = function(){
+    console.log(`Hitesh says hello`);
+}
 
+//heroPower.hitesh()
+myHeros.hitesh()
+myHeros.heyHitesh()
+//heroPower.heyHitesh()
 
+// Inheritance
 
+const User = {
+    name: "chai",
+    email:"chai@gmail.com"
+
+}
+const Teacher = {
+    makeVideo: true
+}
+
+const TeachingSupport ={
+    isAvailable: false
+}
+
+const TASupport = {
+    makeAssignment: 'JS assignment',
+    fullTime: true,
+    __proto__ : TeachingSupport
+}
+
+Teacher.__proto__ = User
+
+// modern syntax
+Object.setPrototypeOf(TeachingSupport, Teacher)
+
+let anotherUsername = "ChaiAurCode   "
+
+String.prototype.trueLength = function(){
+    console.log(`${this}`);
+
+    console.log(`Truelength is: ${this.trim().length}`);
+}
+anotherUsername.trueLength()
+"hitesh".trueLength()
+"iceTea".trueLength()
